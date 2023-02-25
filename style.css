@@ -1,0 +1,145 @@
+@import url(https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap);
+
+:root {
+  /* primary colors */
+  
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+
+  /* neutral colors */
+
+  --dark-gray: hsl(0, 0%, 59%);
+
+  /* font styles */
+
+  --font-family: 'Kumbh Sans', sans-serif;
+  --font-size: 18px;
+  --font-weight: 400;
+  --font-weight-bold: 700;
+}
+
+/* css reset */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* general styles */
+
+body {
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+  background-image: 
+  url(./images/bg-pattern-top.svg),
+  url(./images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: 
+  right 51.9vw bottom 35vh,
+  left 48vw top 52vh;
+  background-color: var(--dark-cyan);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  overflow: hidden;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* card styles */
+
+.main-card {
+  margin: 0 1.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0px 30px 40px 0px rgba(0,0,0,0.2);
+}
+
+.profile-background {
+  height: 8.8rem;
+}
+
+.profile-background img {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-info {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+
+#profile-picture {
+  width: 105px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-top: -3.3rem;
+}
+
+.flex-details {
+  text-align: center;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+
+.flex-details .name {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.flex-details .age {
+  color: var(--dark-grayish-blue);
+  font-size: 1.1rem;
+  margin-left: 0.3rem;
+  font-weight: var(--font-weight);
+}
+
+.profile-info .location {
+  color: var(--dark-grayish-blue);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background-color: white;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.stat-numbers {
+  text-align: center;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0.3rem;
+}
+
+.stat-category {
+  text-align: center;
+  font-size: 0.6rem;
+  color: var(--dark-grayish-blue);
+  letter-spacing: 1.5px;
+}
